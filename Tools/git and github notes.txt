@@ -1,0 +1,598 @@
+Git/Github
+**********
+
+
+Contents:
+---------
+1) Introduction
+2) Version Control
+3) Installation
+4) Basic Git Terminologies
+5) Git Configuration
+6) How to set-up Git Repository?
+7) How to copy from other's repository and collaborate?
+8) Life Cycle of a change
+9) How to review a Repository history?
+10) How to create our own repository?
+11) How to commit Finally?
+12) Branching, Tagging & Merging
+13) How to Undo commit?
+14) How to push commit in github? 
+15) Github Desktop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1)Introduction:
+----------------
+    * Git is a version control system that is used for tracking changes in computer files and coordinating work on those -files among multiple people.
+    * Git is a distributed version control system, which means that it allows multiple users to work on the same files simultaneously and keeps track of changes made to the files by each user.
+    * Git is widely used in software development and has become a standard tool for collaborating on code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2) Version Control:
+--------------------
+   * Make save points that saves our project.
+   * Provides total development freedom.
+   * e.g- git, subversion, perforce
+   * Git is a version control tool.
+   * Github is a service that hosts repositories.(collaboration)
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3) Installation:
+------------------
+   * download git --------> signup in github.com -----------> download Github Desktop
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4) Basic git Terminologies:
+----------------------------
+   * commit
+   * branch
+   * master     <-----------> It always remains a prime branch.
+   * README.md  ------------> It tells complete description about repository.
+   * metadata   <-----------> content of any files.
+   * hash ------------------> A unique SHA1 code for every commit. (sha id === commit id)
+   * index
+   * repository
+   * head  -----------------> It always point to the latest commit.
+   * Merge
+   * Tagging
+   * push
+   * pull request <---------> It is done so that other can review the changes once done we need to merge it.
+   * working tree
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5) git configuration:
+----------------------
+   🔒 command used:
+      `````````````
+      🔑 git config --global user.name "Sachin10-05"
+      🔑 git config --global user.email "sachinkumarrana1005@gmail.com"
+      🔑 git config --list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6) How to set-up Git Repository?
+----------------------------------
+   🔒 command used:
+      `````````````
+      🔑 git --version         ----------> To check git installed or not (it will give git version downloaded)
+      🔑 pwd                   ----------> To check our current directory (i.e, present working directory)
+      🔑 cd                    ----------> Changed directory
+      🔑 ls                    ----------> It lists all folders inside current directory.
+      🔑 git init              ----------> Using this command a normal folder is converted to repository.
+      🔑 ls -al                ----------> It lists all pointers inside git repository.
+      🔑 .                     ----------> read as "period" means current location
+      🔑 ..                    ----------> read as "period period" means previous location (i.e, parent location)
+      🔑 .git                  ----------> it's a file which contains meta-data of git repository.
+      🔑 git status
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7) How to copy from other's repository and collaborate?
+----------------------------------------------------------
+   🔒 command used:
+      `````````````
+      🔑 clear                                     -----------> It is used to clear all command from cmd prompt.
+      🔑 git clone <url> <create_new_name>         -----------> It copies all content from remote repository to our new created repository where we can made some modification (i.e, collaboration)
+      🔑 git status
+      🔑 git diff                                  -----------> To check what got modified in file/repository.
+      🔑 git diff <sha_id>
+              or
+      🔑 git diff HEAD~
+      🔑 git remote                                -----------> It shows the name of remote repository.
+      🔑 git remote -v                             -----------> It shows the name and URL of remote repository.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8) Life Cycle of a change:
+----------------------------
+   🔒 command used:
+      `````````````
+      🔑 git add
+      🔑 git commit
+
+  
+             Repository
+                  |
+                  |
+                  |
+         File1, File2,File3,etc.
+                  |
+                  |
+                  |
+         ("working directory") --------------> It is a curr directory where some temp. changes are made in files.
+                  |
+                  |
+                  |
+             🔑 git add  ----------------->  🔒 command used
+                  |
+                  |
+                  |
+          ("staging index") -------------------> files become about to commit.
+                  |
+                  |
+                  |
+           🔑 git commit  ----------------->  🔒 command used
+                  |
+                  |
+                  |
+           finally committed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9) How to review a Repository history?
+----------------------------------------
+   🔒 command used:
+      `````````````
+      🔑 git log            ------------------------> It shows all the latest commit made with author name. (It can be manually seen through github)
+      🔑 q                  ------------------------> By pressing 'q' you will get out from log
+      🔑 git log -3         ------------------------> It shows latest 3 logs, similarly any no. of logs can be seen...
+      🔑 git lop -p         ------------------------> It shows the full display of each commit. (i.e, git log + git diff)
+      🔑 git log --oneline  ------------------------> Shows the list of Commits with a simple message.
+      🔑 git log --stat     ------------------------> It shows lists of commits with what no lines with changes made in them, but it doesn't show actual content that got modified.
+      🔑 git show <id of any commit> ---------------> To check changes inside particular commit.
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10) How to create our own repository?
+-------------------------------------
+   🔒 command used:
+      ````````````
+      🔑 cd "C:\Users\dell\OneDrive\Desktop" ----------------------> step-1: go to location where repository to be created
+      🔑 mkdir <name>      ----------------------------------------> To make empty directory/file in that location
+      🔑 cd <name>         ----------------------------------------> Go to that location
+      🔑 git init          ----------------------------------------> To convert empty file to git repository.
+      🔑 git status
+      🔑 Add one file in that folder
+      🔑 git status
+      🔑 git add  "<file_name>"
+      🔑 git commit -m  "init file_name"   ------------------------> To commit in repository with message.
+      🔑 git status
+      🔑 git log
+         
+      * To add some modification in that file:
+        1) make some change in that file
+        🔑 git status     ---------------------------> To check whether modification done or not.
+        🔑 git diff       ---------------------------> To check what modification done.
+        🔑 git status
+        🔑 git add "file_name"
+        🔑 git status
+        🔑 git commit
+      
+      
+      * To undo the modification:
+        🔑 git restore "file_name" -----------------------> It takes to latest commit (i.e, head) of that file. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11) How to commit finally?
+----------------------------
+    🔒 command used:
+       ````````````
+      🔑 git status ----------------------> To check "working directory".
+      🔑 git add "file_name"   -----------> It takes into "staging index".
+      🔑 git commit ----------------------> For final commit.
+
+         OR
+   
+      🔑 git status
+      🔑 git -am  -------------> To (do add + commit) together.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12) Branching, Tagging & Merging
+----------------------------------
+    🔒 command used:
+       ````````````
+      ⚽ STEP-1: Branching:
+        -------------------
+      	🔑 git branch     ---------------------------------> It shows total branch available and "*" shows curr branch where we are in.
+      	🔑 git branch <branch_name>  ----------------------> To create new branch
+      	🔑 git checkout <branch_name> ---------------------> To switch into new branch.
+      	🔑 git checkout -b  <new_branch_name> -------------> To create new branch.
+
+
+      ⚽ STEP-2: Merging:
+        -----------------
+      	🔑 git branch
+      	🔑 git checkout master ---------------> go to master
+      	🔑 git merge <branch_name> -----------> branch_name needed to be merged.
+        
+      -- since new branch already merged with master --
+      -- now we need to remove/delete that branch --
+      	🔑 git branch -d branch_name ---------> branch_name which needed to be deleted.
+      	🔑 git branch ------------------------> To check total branch available after deletion.
+       
+
+      ⚽ STEP-3: Tagging:
+        -----------------
+      	🔑 git tag   ----------------------------------------------> It tags a specific commit.
+      	🔑 git tag -a <tag_name> <SHA_id> -m "some_message" 
+      	🔑 git tag -d <tag_name>        ---------------------------> To delete tag.
+      
+
+      ⚽ STEP-4: Stash (In case Merge conflict arises):
+        -----------------------------------------------
+      	🔑 git stash
+      	🔑 git stash apply    -------------------> to unstash
+      	🔑 git add
+      	🔑 git commit -m "correction done"
+
+
+      	🔑 git pull
+      	🔑 git push -u origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13) How to Undo commit?
+-------------------------
+    🔒 command used:
+       ````````````
+    🔑 git commit --amend   ------------------------> It is used to ammend the most recent commit (i.e, head)
+    🔑 git revert <commit_id>     ------------------> It revert given commit.
+    🔑 git reset                          ----------> Delete commit (** most dangerous command)
+           1) git reset --soft <commit_id>
+           2) git reset --mixed
+           3) git reset --hard
+
+   * Note:- press Esc ---> colon (:) ---> wq ---> enter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14) How to push commit in github? 
+-----------------------------------  
+    🔒 step-1: Go to Github.com ---------> Create one Empty repository with some name (e.g-Notes).
+
+    🔒 step-2: Open command prompt (for window) or Terminal (for Mac OS) then-
+               🔑 git --version
+               🔑 pwd
+               🔑 cd "location for local repo to be created"
+               🔑 mkdir Notes  -----------------------------------------------------------------> //To create one Local repo
+               🔑 cd Notes
+               🔑 git init
+               🔑 git ls -al
+
+   🔒 step-3: create one README.md file inside that local repo folder.
+   
+   🔒 step-4: 
+               🔑 git add README.md.txt
+               🔑 git commit -m "Initial commit"
+    
+   🔒 step-5: Now we need to map our Local repo with Remote repo (repo which is created in github.com)
+               🔑 git remote add origin https://github.com/Sachin10-05/Notes.git ----------------------------------> //copy this command when we create remote repo.
+               🔑 git status
+               🔑 git log ----------------> //It will show one commit, but this commit is not done in remote repo. So for that we need to add our configuration:-
+               🔑 git config --global user.name "Sachin10-05" 
+               🔑 git config --global user.email "sachinkumarrana1005@gmail.com"      
+               🔑 git config --list
+
+   🔒 step-6: push final commit to remote (or main) repository.
+               🔑 git push -u origin main
+                         or
+               🔑 git push -u origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15)☝☝ Above process/steps can be done using Gihub Desktop GUI:
+----------------------------------------------------------------
+   🔒 step-1: Open github Desktop App.
+   🔒 step-2: File ----> Add Local repository
+   🔒 step-3: Click on Fetch origin <-----> It psuh/commits repository.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
