@@ -1,0 +1,415 @@
+                                                               HYPER TEXT MARKUP LANGUAGE (HTML5)
+                                                               **********************************
+                                                               
+contents:
+---------
+1) Introduction
+2) Comments
+3) Structure of html
+4) Meaning of html structures
+5) Tags
+6) html Elements
+7) Block and Inline Element
+8) Attribute & values
+9) style Attribute
+10) Heading Tag
+11) Formatting Tags
+12) Image Tag
+13) Favicon
+14) Quotation & Citation Tag
+15) Lists 
+16) Table 
+17) Forms
+18) Links
+19) Semantic & Non-semantic Tags
+20) Div & Span Tag
+21) Bookmark in HTML
+22) HTML Entities
+23) HTML Media    
+24) HTML Graphics 
+25) HTML DOMs                                                              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Introduction:
+-----------------
+      * It is a standard markup language used to create web pages. 
+      * Basic Skeleton of web page.
+      * Basic building block of web page.
+      * It follows standard w3c (world wide web consortium).
+      * Not case sensitive.
+
+      * It stands for "HyperText Markup Language". 
+          * HyperText -----------------> It means one page is linked with many other pages.
+          * Markup    -----------------> Combinations of <tags>.
+          * Language  -----------------> which follows certain set of rules/guidelines.
+
+      * HTML docs can be opened in two ways:-
+          * usig text editor
+          * using browser
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Comment:
+------------
+      * single/multi-line:  <!--     -->
+      * vs code shortcut:   ctrl + /
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Structure of html:
+----------------------
+      * ! + Enter    (shortcut in VS code to get below Ammet Abbreviation) 
+     
+      <!DOCTYPE html>
+      <html lang="en"> 
+      <head> 
+          <meta charset="UTF-8">                                                         
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title> </title>
+          <link rel=" " type=" " >
+          <script></script>
+          <style></style>
+      </head>
+      <body></body>
+      </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Meaning of html structure:
+------------------------------
+      * <!DOCTYPE html>          :- It tells browser that this document is an HTML5 document.
+      * <html>                   :- It is a root of html page.
+      * <html lang="en"          :- It tells content of web page is in English.
+      * <head>                   :- It contains metadata (data about data) that describes main content of web page.
+      * <meta attribute="value"> :- Tell the browser to parse the markup into multiple languages by creating a meta element as a child of the head element.
+      * <meta charset="UTF-8">   :- It tells the browser how to encode characters for the page. It includes most characters from the majority of written languages.
+      * <title>                  :- It specifies a title for web page which is shown in the browser title bar.
+      * <body>                   :- It contains the actual content which are visible to us.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. Tags:
+---------
+      * It's an anonymous notation that tells browser how to render different element.
+      * Tags are emclosed in < > brackets.
+        <p>   :- Paragraph Tag
+        <br/> :- Line Break Tag
+        <hr/> :- Horizontal row
+        
+      * Types of Tags:
+            1) Empty Tags/self closing tag ---------> Tags without closing tags are known as Empty tags. Ex- <img />, <br />, <hr />, <input />, etc.
+            2) Non-Empty Tags
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. Html Elements:
+------------------
+      * It is defined as [ Opening Tag + Content + Closing Tag (optional)]
+        Ex:-  <h1> My First web page </h1>                     ---------------> Element
+        Ex:-  <img src = "wallpaper.jpg"  alt="Loading..." />  ---------------> Void Element
+                    |           |
+                    |           |
+                 Attribute    Value    
+                    or
+                 Property
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7. Types of Element:
+---------------------
+      * Inline element:-
+            * An inline element does not start on a new line.
+            * An inline element only takes up as much width as necessary.
+            * Inline elements don't have top and bottom margins.
+            	Ex- <em>, <button>, <span>, <br>, etc.
+              
+      * Block level element:-
+            * A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.
+            * A block-level element always takes up the full width available.
+            * Block element have both top and bottom margins.
+              Ex- <div>, <p>, <h1>, etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8. Attribute/Property:
+-----------------------
+      * HTML attributes are special words used inside the opening tag of an element to control the element's behavior.
+      * All html elements can have attributes.
+      * Attribute provide additional information about elements.
+      * Attribute always come with name-value pair.
+      * Ex:- <p title="I'm a tooltip"> This is a paragraph </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9. Style Attribute:
+--------------------
+      * style attribute is used to add styles to an element such as- color,font,size,etc.
+      * syntax: <tagname style="property:value;"> </tagname>   ------> Also called inline-style.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10. Heading Tag:
+-----------------
+      * <h1> </h1> :- Largest size
+      * <h2> </h2>
+      * <h3> </h3>
+      * <h4> </h4>
+      * <h5> </h5>
+      * <h6> </h6> :- Smallest size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11. 
+                                                                                                                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                               
