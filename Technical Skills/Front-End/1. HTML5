@@ -348,8 +348,183 @@ contents:
 
 
 
-11. 
-                                                                                                                            
+11. Formatting Tags:
+---------------------
+      * <b>       :- Bold text
+      * <em>      :- Emphasized text  ✔ 
+      * <strong>  :- Important text  ✔ 
+      * <i>       :- Italic Text
+      * <mark>    :- Marked text
+      * <small>   :- smaller text
+      * <del>     :- Deleted text
+      * <ins>     :- Inserted text
+      * <u>       :- Underlined text
+      * <big>     :- Bigger text
+      * <sub>     :- subscript text   (H2O)
+      * <sup>     :- superscript text (x^2 + x^2) 
+      * <pre>     :- pre-formatted text  (poet problem (all content inside it get displayed as it is)).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12. Image Tag:
+---------------
+      * It can improve the design and appearance of a web page.
+      * <img src="URL" alt=" " width=" " height=" " border=" " />
+      * The alt attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load. 
+      * <figure>
+            <img />
+            <figcaption> </figcaption>
+        </figure>
+        
+      * <picture>
+            <source srcset=""> </source>
+            <source srcset=""> </source>
+        </picture>
+        
+      * <img src=" " usemap="#abcd"> ------------------------> Refer to W3School.com
+            <map name="abcd">
+            <area shape="" coords="" href="">
+        </map>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13. Favicon:
+-------------
+      * It is a small image displayed next to the page title in the browser tab.
+      * syntax:
+        <head>
+            <link rel="icon" type="image/x-icon" href="image.png" />
+        </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14. Quotation & Citation Tag:
+------------------------------
+      * <blockquote> :- It defines a section that is quoted from another section. Browsers usually indent <blockquote> elements.
+      * <q>          :- It defines short quoteations (" ")
+      * <address>    :- It defines the contact information for the author of the documents.
+                        Usually the content inside are rendered in "itallic".
+                  
+      * <cite>       :- It defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).
+                        Ex- <p> <cite> written by </cite> <cite> - Sachin Kumar </p>
+                        
+      * <bdo>        :- It defines the text direction.
+      
+      * <abbr title="Hyper Text Markup Language"> HTML </abbr> :- It defines Abbreviation or Acronym.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15. Lists:
+-----------
+      * It allows to group a set of related items in lists.
+      * Ordered List: 
+            <ol type="">
+                <li> Item-1 </li>
+                <li> Item-2 </li>
+            </ol>
+            
+       * Unordered list:
+            <ul type="">
+                <li> Item-1 </li>
+                <li> Item-2 </li>
+            </ul>
+            
+       * Description List: 
+            * It is a list of terms with a description of each items.
+            * The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term:
+              <dl>
+                <dt> Coffee </dt>
+                <dd> -Black Hot drink </dd>
+              </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16. 
 
 
 
