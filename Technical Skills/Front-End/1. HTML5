@@ -25,9 +25,11 @@ contents:
 20) Div & Span Tag
 21) Bookmark in HTML
 22) HTML Entities
-23) HTML Media    
-24) HTML Graphics 
-25) HTML DOMs                                                              
+23) HTML Colors
+24) HTML Media    
+25) HTML Graphics 
+26) HTML DOMs 
+27) HTML APIs  ✖
 
 
 
@@ -785,13 +787,184 @@ contents:
 
 
 
-21. 
+21. Bookmark in HTML:
+----------------------
+      * HTML link can be used to create bookmarks, so that user can jump to specific part of web page.
+        Step-1: Create a <a> tag.
+        Step-2: Mention Tag where need to jump with id=" " or class=" " value.
+        
+      * Ex- <a href="#Achievements"> Jump To Achievements </a>
+            <section id="Achievements"> Achievements Section </section>
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22. HTML Entities:
+-------------------
+      * Some characters are reserved in HTML, If we use them they might mix them with tags. for ex- <, >, &, etc.
+      * To use these reserved characters appropriately we need HTML Entities.
+      * Below Entity name are case sensitive. **
+      
+        &nbsp;    --------> Non-Breaking space
+        &lt;      --------> <
+        &gt;      --------> >
+        &amp;     --------> &
+        &quot;    --------> " 
+        &apos;    --------> '
+        &cent;    --------> 
+        &pound;
+        &yen;
+        &euro;
+        &copy;    --------> copyright
+        &reg;     --------> registered Trademark
+        
+      * Note:- For Emojis, Symbols, etc also we can use HTML Entities for that refer W3School.com.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+23. HTML Colors:
+----------------
+      * color name
+      * RGB/RGBA
+      * HEX
+      * HSL/HSLA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+24. HTML Media:
+----------------
+      * Multimedia on the web is sound, music, videos, movies, and animations. ✔
+      
+      * <video width="320" height="240" autoplay muted>
+           <source src="movie.mp4" type="video/mp4">
+        </video>
+        
+      * <audio controls autoplay muted>
+           <source src="horse.ogg" type="audio/ogg">
+        </audio>
+        
+      * <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe> -----> For playing YouTube videos.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+25. HTML Graphics:
+-------------------
+      * The HTML <canvas> element is used to draw graphics on a web page.
+      * It is only a container for graphics.
+      * Ex- Empty canvas:
+            <canvas id="myCanvas" width="200" height="100"></canvas>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+26. HTML DOMs:
+---------------
+      * It stands for Document Object Model.
+      * When a web page is loaded, the browser creates a Document Object Model of the page.
+      * It is also defined as a standard for accessing documents, which can be done by JS.
+      * It defines properties, methods, events for all HTML elements.
+      * More Details will be covered in JS........
+
+        Ex:-
+                                    Document
+                                       |
+                               Root Element (<html>)
+                                       |
+               -----------------------------------------------------------------
+              |                                                                 |
+            <head>                                                            <body>
+              |                                                                 |
+   -------------------------                               -------------------------------------------------
+  |                         |                            |                                                 |
+<title>                   <style>                       <h1>                                              <a>
+                                                         |                                                 |
+                                                     heading text                                     -----------------
+                                                                                                     |                 |
+                                                                                                  link text          href=" " 
+   
 
 
 
