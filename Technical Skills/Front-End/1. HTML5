@@ -524,7 +524,270 @@ contents:
 
 
 
-16. 
+16. Table:
+-----------
+      Ex:-
+        <table border="" cellpadding="" cellspacing="" style="border-collapse:collapse;" align="center>
+            <caption caption-side="bottom">
+            <colgroup>
+                <col span="2" style="background-color:red">  -----------> //col-1
+                <col style="background-color:yellow">        -----------> //col-2
+            </colgroup>
+            <thead> </thead>
+            <tbody>
+                <tr rowspan="" colspan="">
+                  <th> </th>
+                  <td> </td>
+                </tr>
+            </tbody>
+            <tfoot> </tfoot>
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17. HTML Form:
+---------------
+      * It is used to collect user input.
+      * In order for a form's data to be accessed by the location specified in the action attribute, you must give the text field a name attribute and assign 
+        it a value to represent the data being submitted.
+      
+      * form elements:
+        --------------
+            * <form>            :- It is used to create an HTML form.
+            * <label>           :- It represent a caption for an item in a user interface.
+            * <input type="" /> :- It is use to accept data from user.
+            * <select>          :- Choose from no. of options available.
+            * <textarea>
+            * <button>
+            * <fieldset>
+            * <legend>
+            * <datalist>        :- It is used to provide an "auto-complete" feature for <input> element.
+            * <output>
+            * <option>
+            * <optgroup>
+            
+      * input types:
+        ------------
+            * text
+            * password
+            * email
+            * radio
+            * checkbox
+            * url
+            * submit
+            * reset
+            * button
+            * color
+            * datetime-local
+            * date
+            * month
+            * number
+            * week
+            * range
+            * hidden
+            * search
+            * tel
+            * time
+            
+      * input Attributes:
+        -----------------
+            * value
+            * readonly
+            * id
+            * name
+            * disabled
+            * size
+            * min
+            * max
+            * multiple
+            * pattern
+            * placeholder
+            * required
+            * step
+            * autofocus
+            * autocomplete
+            * width
+            * height
+            
+      Ex:- 
+        <form action=" " target=" " method="get/post">
+            <label for="fname" >First Name:</label>
+            <input type="text" id="" name="username" placeholder="write ur name here"><br>
+            <fieldset>
+                <legend> Which animal do u like most? </legend>
+                <label> <input id="cat" type="radio" name="animal" value="cat"> Cat </label>
+                <label> <input id="cat" type="radio" name="animal" value="cat"> Dog </label>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+        
+        
+      Imp Note:-
+      ----------
+          * using <label> we can click on word also and select the radio-button.                    ✔
+          * by giving same name attribute inside <input> we can select one radio-button at a time.  ✔ 
+          * After clicking he submit button data always submitted in the form of "name-value" pair. ✔ 
+          
+          * If we do not mention value=" " attribute to <input> then when form will be submitted it include animal=on which is generally not useful when we 
+            have multiple buttons.     ✔ 
+            
+          * The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that 
+            they appear on a new line. ✔
+            
+          * The legend element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of 
+            the form.                  ✔
+            
+          * Always give name attribute to checkboxes in <input>, doing this makes it easier for a server to process your web form, especially when there are 
+            multiple checkboxes.       ✔
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18. Links:
+-----------
+      * "Anchor tag" with its attribute "href" is used to create hyperlink to web pges,files,email,locations on same page or anything else a URL can address.
+      * <a> </a> 
+      * <a href="mailto:xyz@gmail.com"> Click to Email </a>       ------------> It opens mail app.
+      * <a href="tel:+916299033027"> Click to Call     </a>       ------------> It is used to make call to specified phone no.
+      * <a href="https://facebook.com" target=""> Click Here </a> ------------> For redirecting to specified website.
+      
+      * target=" " :- This atribute specifies where the link is needed to opened.
+            * target="_blank" ----------> It redirect to new tab.
+            * target="_self"
+            * target="_parent"
+            * target="_top"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19. Semantic & Non-semantic Tags:
+----------------------------------
+      * Non-Semantic Elements:- <div> and <span> 
+      * Semantic Elements    :- It introduces meaning to the web page rather then just presentation.
+        Ex- 
+          * <form>
+          * <table>
+          * <article> 
+          * <section>
+          * <aside> 
+          * <header>
+          * <footer>
+          * <nav>
+          * <figure>
+          * <figcaption>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20. Div & Span Tag:
+--------------------
+      * <div>
+      ---------
+          * It is used as container for other HTML elements.
+          * It has no required attribute but style,class,and id are common. 
+          * It is a block level element.
+          * But its default block-level property can be changed using css "display" attribute.
+            <style>
+                div { display: inline; }
+            </style>
+            
+      * <span>
+      ---------
+          * It is an inline container used to mark up a part of a text, or a part of a document.
+          * It has no required attribute but style,class,and id are common. 
+          * It is a inline element.
+          * But its default inline property can be changed using css "display" attribute.
+            <style>
+                span { display: block; }
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21. 
+
+
 
 
 
