@@ -1,0 +1,509 @@
+                                                              Cascading Style Sheet (CSS)
+                                                              ***************************
+
+Contents:
+---------
+1. Introduction
+2. Comments
+3. Advantages of css
+4. Disadvantages of css
+5. Diff ways of adding css to HTML page ?
+6. Selectors in css:
+      -- Simple selector
+      -- Pseuso-class selector
+      -- Pseudo-element selector
+      -- Multiple selector
+      -- Some more selectors
+12. Specificity
+13. Box-Model
+14. Colors in css
+15. Units in css
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Introduction:
+-----------------
+      * It is a stylesheet language used to describe HTML documents.
+      * It is used to describe the presentation of a document written HTML or XML.
+      * It can control the layout of multiple web pages all at once.
+      
+      * For the styling of the page to look similar on mobile as it does on a desktop or laptop, you need to add a meta element with a special content attribute.
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+      * syntax:
+        selector {
+            property: value;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Comments:
+------------
+      * Single-line / Multi-line comment:   /*     */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Advantages of css:
+----------------------
+      * It provides the advantages of using separate css file rather then embedding the css code inside the one html file, due to which it reduces the file size means reduces bandwidth, which means faster loading time.
+      * Better website speed.
+      * Easier to maintain.
+      * Consistent design.
+      * Time saving.
+      * Better device compatibility.
+      * Flexible positioning of design elements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Disadvantages of css:
+-------------------------
+      * Creates confusion due to many css levels.
+      * Cross-browser issue.
+      * Security issue.
+      * Extra work for developers. i.e, design services are required to consider and test all css codes across different browsers for compatibility.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. Diff ways of adding css to HTML page:
+-----------------------------------------
+      * Inline:    <p style="color:green;"> This is Inline Styling </p>
+      * Internal:  <head>
+                      <style> p { color: green;} </style> 
+                   </head>
+                   
+      * External:  <link rel="stylesheet" type="text/css" href="file_name"> ---------> inside <head> of HTML page.
+                   p {
+                     color: green;
+                   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. Selectors in css:
+---------------------
+      -- Simple selector
+      -- Pseuso-class selector
+      -- Pseudo-element selector
+      -- Multiple selector
+      -- Some more selectors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7. Simple selector:
+--------------------
+      * Element selector
+      * Class selector(.)
+      * Id selector (#)
+            -- The id of an element is unique within a page, so the id selector is used to select one unique element. 
+            -- An Id and Class name cannot start with a number. ✔
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8. Pseuso-class selector:
+--------------------------
+      * A pseudo-class is a keyword added to a selector that specifies a special state of the selected elements.
+      * Basically a pseudo-class is a selector that assists in the selection of something that cannot be expressed by a simple selector, for example ":hover". ✔ 
+      * Pseudo-class name are not case-sensitive.
+      * syntax:
+          selector:pseudo-class { 
+              property: value;
+          }
+          
+          
+      * Pseudo-classes & HTML classes:
+        ------------------------------
+              * In case if many <a> tag exists but we want any specific one to get styles Then,
+              * Ex- <a class="highlight" href="css_syntax.asp">CSS Syntax</a>
+                 a.highlight:hover {
+                    color: #ff0000;
+                    font-size: 22p;
+                 } 
+                 
+                 
+      * Dynamic pseudo-classes:
+        ------------------------
+              * :link        :- Ex- a:link       -----------> It selects all unvisited links.
+              * :visited     :- Ex- a:visited    -----------> It select all visited links. (for ex- after clicking on link it gets changed to purple-color by default, we can change it using this property)
+              * :hover       :- Ex- a:hover      -----------> selects links on mouse hover.
+              * :active      :- Ex- a:active     -----------> It selects the active link after click on link.
+              * :focus       :- Ex- input:focus  ----------> Selects the <input> element that has focus.
+              
+              
+      * UI element states pseudo-classes:
+        ---------------------------------
+              * :enabled     :- It selects every enabled input element.
+              * :disabled    :- It selects every disabled input element.
+              * :checked     :- It select every checked input element (Ex- input:checked)
+              
+              
+      * Structural pseudo-classes:
+        --------------------------
+              * :first-child          :- Ex- p:first-child
+              * :nth-child(n)         :- Ex- p:nth-child(2)
+              * :nth-last-child(n)    :- Ex- p:nth-last-child(2)  ----------> Selects every <p> element that is the second child of its parent, counting from the last child .
+              * :nth-of-type(n)       :- Ex- p:nth-of-type(2)     ----------> Selects every <p> element that is the second <p> element of its parent
+              * :nth-last-of-type(n)  :- Ex- p:nth-last-of-type(2)----------> Selects every <p> element that is the second <p> element of its parent, counting from the last child
+              * :last-child           :- Ex- p:last-child         ----------> It select every <p> element that is last child of its parent element.
+              * :first-of-type        :- Ex- p:first-of-type      ----------> Selects every <p> element that is the first <p> element of its parent
+              * :last-of-type         :- Ex- p:last-of-type       ----------> Selects every <p> element that is the last <p> element of its parent
+              * :only-child           :- Ex- p:only-child         ----------> Selects every <p> element that is the only child of its parent
+              * :only-of-type         :- Ex- p:only-of-type       ----------> Selects every <p> element that is the only <p> element of its parent
+              * :root
+              * :empty
+              * :target               :- Ex- #news:target         ----------> Selects the current active #news element (clicked on a URL containing that anchor name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9. Pseudo-element selector:
+----------------------------
+      * It is used to style specified parts of an element.
+      * A pseudo-element however allows us to create items that do not normally exist in the document tree, for example " ::after".
+      * For example, it can be used to:
+            -- Style the first letter, or line, of an element.
+            -- Insert content before, or after, the content of an element
+            
+      * ::after  ✔ 
+      * ::before ✔ 
+      * ::first-letter  ------------------> first-letter of any text can be changed.
+      * ::first-line    ------------------> this select contents of first-line only.
+      * ::selection     ------------------> when we select some content by double mouse press its by-default color is get selected we can change that by using this property.
+      
+      * Note:- ::before and ::after content will not be present inside DOM i.e, this will not be visible when we will inspect it. to use it we need to include content: "";
+        Ex- <button class="btn">Click Here</button>
+        .btn::before {
+            content: "click";  /* it means the content inside .btn will become "click click here" */
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10. Multiple selector:
+-----------------------
+      * It is used to group multiple elements together with same style definitions.
+      * Ex- h1, h2, p {
+              text-align: center;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11. Other Selectors:
+---------------------
+      * Universal selector:
+        Ex- * {
+               margin: 0;
+               padding: 0;
+               box-sizeing: border-box;
+               font-family: sans-seriff;
+             }
+             
+      * Nested selector:
+        Ex- table tr td {
+                background-color: red;
+            }
+            
+      * Attribute selector:- It is used to select element with a specified attribute.
+        Ex- a[target] {
+                background-color: green;
+            }
+            
+      * CSS combinators:
+            -- descendant selector (space)  ----------> It matches all elements that are descendants of a specified element.
+            -- child selector (>)           ----------> The child selector selects all elements that are the children of a specified element.
+            -- adjacent sibling selector (+)----------> It is used to select an element that is directly after another specific element. Here, "adjacent" means "immediately following" not child.
+            -- general sibling selector (~) ---------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
