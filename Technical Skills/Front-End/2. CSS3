@@ -10,14 +10,13 @@ Contents:
 5. Diff ways of adding css to HTML page ?
 6. Selectors in css:
       -- Simple selector
-      -- Pseuso-class selector
-      -- Pseudo-element selector
+      -- Pseuso-class selector   ✔
+      -- Pseudo-element selector ✔
       -- Multiple selector
       -- Some more selectors
 12. Specificity
 13. Box-Model
-14. Colors in css
-15. Units in css
+14. Units in css
 
 
 
@@ -417,7 +416,145 @@ Contents:
 
 
 
-12. 
+12. Specificity:
+-----------------
+      * If there are two or more css rules that point to the same element, the selector with highest specificity winand its style declaration will be applied 
+        to that HTML elements.
+      * If " !important " is used in css then, it will override all previous styling rules even inline styles also.
+        Ex:- p {
+              color: red !important;
+             }
+             
+      * Inline  >  Id  >  class,Pseudo-class,Attribute,etc.  >  Element/Tag and pseudo-elements.
+      
+      * :root       -----------------> It is used to define global variable that apply to entire document.
+      *  *          -----------------> It is used to apply styles to all elements of page.
+      * specificity -----------------> *  >  :root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13. Box-Model:
+---------------
+      * It is the basic building block of css.
+      * According to box-model concept, every element on a page is a rectangular box and may have width,height,padding,border and margin.
+      
+                               ---------------------------------------
+                              |                 margin                |
+                              |     -----------------------------     |
+                              |    |            border           |    |
+                              |    |     ---------------------   |    |
+                              |    |    |       padding      |   |    |
+                              |    |    |    -----------     |   |    |
+                              |    |    |   |  contents | h  |   |    |
+                              |    |    |    -----------     |   |    |
+                              |    |    |        w           |   |    |
+                              |    |     ---------------------   |    |
+                              |    |                             |    |
+                              |     -----------------------------     |
+                              |                                       |
+                               --------------------------------------- 
+                               
+      * It allows us to include the padding and border in an element's total width and height.
+      * It's always a good practice to apply this property as a universal selector.
+      * Ex- * {
+              box-sizing: border-box;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14. Units in css:
+-----------------
+      * Absolute unit:
+        --------------
+            * The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
+            * Absolute length units are not recommended for use on screen, because screen sizes vary so much. ✔
+            * However, they can be used if the output medium is known, such as for print layout.
+            * Ex:- mm, cm, in(1 inch = 2.54cm = 96px), px(1px = 1/96 of 1 inch)
+            
+            
+      * Percentage unit:
+        ----------------
+            * % -----> Relative to its parent elements.
+            
+            
+      * Relative unit:
+        --------------
+            * Relative to font-size:
+                  * em    ------------> -- Relative to the font-size of the parent (1em = 16px)
+                                        -- if parent font-size:2em then all elements font-size will get doubled if they are in 'em'.
+                  * rem   ------------> Relative to font-size of the root. (1rem=16px)
+            
+            * Relative to viewPort:
+                  * vw   -------------> Relative to 1% of the width of the viewport.
+                  * vh   -------------> Relative to 1% of the height of the viewport.
+                  
+      * Note:  
+       ------
+            * viewport = browser window size.
+            * 100vw = 100% widht of screen-size, It is 'NOT' relative to its parent.
+            * Morever vw and vh are absolute to full width of screen.
+            * By default parent font-size = 1em. ✔ 
+            * Practical diff b/w Absolute (i.e, px) and Relative (i, em) ---------> when we go to browser setting and inside appearance if we change font-size
+                                                                                    to very large then all website with "em" units size will also get increased 
+                                                                                    but, this will not happen with "px" as they will remain same.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15. 
+
+
+
 
 
 
