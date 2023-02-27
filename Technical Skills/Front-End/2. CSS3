@@ -18,6 +18,18 @@ Contents:
 13. Box-Model
 14. Units in css
 
+15. CSS Font 
+16. CSS Text
+17. CSS Background
+18. CSS Border
+19. CSS Box Model
+20. CSS Colors
+21. CSS Layout **
+22. CSS Table 
+23. CSS Column
+24. CSS List & Marker
+
+
 
 
 
@@ -551,7 +563,317 @@ Contents:
 
 
 
-15. 
+15. CSS Font:
+--------------
+      * font-family: Times, serif, Arial, Helvetica, sans-serif;
+      * font-size: 15px;
+      * font-weight: bold;
+      * font-style: italic;
+      * font-variant: small-caps;
+      * font-stretch: expanded;
+      
+      * font: 15px Helvetica, sans-serif, Arial;      /* (shorthand: font-size,font-family) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16. CSS Text:
+-------------
+      * text-align: center;
+      * text-decoration: underline or line-through;
+      * letter-spacing: 5px;
+      * text-transform: uppercase;
+      * word-spacing: 8px;
+      * text-indent: 40px;
+      * line-height: 40%;  /*Height b/w two lines */ 
+      * text-shadow: 4px 4px #ff0000; ✔ 
+      * color
+      * vertical-align
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17. CSS Background:
+-------------------
+      * background-image: url(" ");
+      * background-size: auto;
+      * background-position: center;
+      * background-repeat: no-repeat;
+      * background-color: #ffffff;
+      * background-attachment: fixed;  ✔
+      * background-origin: content-box;
+      
+      * background : -------------->   (shorthand:-  color, bg-image, bg-repeat, bg-attach, bg-pos)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18. CSS Border:
+----------------
+      * border-width: 4px;
+      * border-style: solid;
+      * border-radius: 4px;
+      * border-color: #000000;
+      * border-spacing: 20px;
+      * border-image
+      * border-top-style
+      * border-right-style
+      * border-bottom-style
+      * border-left-style
+      * border-top-color
+      * border-collapse: collapse;  ✔  (useful in <table>)
+      
+      * border: 20px dotted green; -------------->  (shorthand:- border-width,border-style,border-color)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19. CSS Box Model:
+-------------------
+      * padding: 10px 20px 10px 20px;  ----------> /* shorthand: top,right,bottom,left */
+      * padding-top
+      * padding-right
+      * padding-bottom
+      * padding-left
+      
+      * margin: 20px 10px 20px 10px;  ----------> /* shorthand: top,right,bottom,left */
+      * margin-top
+      * margin-right
+      * margin-bottom
+      * margin-left
+      
+      * margin: 10px 20px;            ----------> /* shorthand: top-bottom, left-right */ ✔ 
+      * margin: auto;                 ----------> It will be centered horizontally.       ✔ 
+      
+      * visibility: hidden;     ✔
+      * display: inline-block;  ✔
+      * height: auto;           ✔
+      * width: 100px;           ✔
+      * float: right; ------------> It specifies whether an element should float to the left, right, or not at all.     ✔ 
+      * clear: left;  ------------> It specifies what should happen with the element that is next to a floating element.✔ 
+      * overflow: scroll ---------> It specifies what happens if content overflows an element's box.                    ✔
+          * visible (by-default)
+          * hidden
+          * scroll
+          * auto
+          
+      * Note:- When we use the float property, and we want the next element below (not on right or left), we will have to use the clear property.
+      * Note:- For best practice we should use float and clear only with images and text else, we should go with display:flex;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20. CSS Colors:
+----------------
+      * color: rgb(0, 0, 0);
+      * outline-color: #000000;
+      * caret-color: coral; ----------> It specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable.
+      * opacity: 0.8;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21. CSS Layout:
+----------------
+      * box-align: start;
+      * box-direction: normal;  ----------> It specifies whether a box lays out its contents normally (from the top or left edge), or in reverse (from the bottom or right edge)
+      * box-flex: normal;       ----------> This property specifies how a box grows to fill the box that contains it, in the direction of the containing box's layout
+      * box-orient: inline;
+      * box-sizing: margin-box; ----------> It allows us to include the padding and border in an element's total width and height. ✔
+      * box-pack: justify;
+      * min-width: 200px;
+      * max-width: 400px;
+      * min-height: 100px;      ----------> If our (content-height < actual-height) then its fine else, if (content height > actual-height) then actual-height will get increased accordingly...
+      * max-height: 1000px      ----------> If our (content-height < actual-height) then it will take 'content-height' else, if (content height > actual-height) then overflow will occur.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22. CSS Table:
+---------------
+      * border-spacing: 4px;        -------> It sets the distance between the borders of adjacent cells.
+      * border-collapse: separate;  -------> It sets whether table borders should collapse into a single border or be separated. ✔ 
+      * empty-cells: show;          -------> It specifies whether or not to display borders and background on empty cells in a table.
+      * caption-side: bottom;       -------> It specifies the placement of a table caption
+      * table-layout: auto;         -------> It defines the algorithm used to layout table cells, rows, and columns.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+23. CSS Column:
+----------------
+      * column-gap: 4px;            --------> It specifies the gap between the columns
+      * column-rule-width: medium;  --------> It specifies the width of the rule between columns.
+      * column-rule-color: #000000; --------> It specifies the color of the rule between columns.
+      * column-rule-style: dashed;  --------> It specifies the style of the rule between columns.
+      * column-count: 20;           --------> It specifies how many columns an element should span across. ✔
+      * column-span: all;           --------> It specifies how many columns an element should span across. ✔ 
+      * column-width: 4px;          --------> It specifies the column width.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+24. CSS List & Marker:
+----------------------
+      * list-style-type: square;              --------> It specifies an image as the list-item marker.
+      * list-style-position: 10px;            --------> It specifies the position of the list-item markers (bullet points).
+      * list-style-image: url("codeHelp.png");--------> It specifies the type of list-item marker.
+      * marker-offset: auto;                  --------> It allows you to specify the distance between the marker and the text relating to that marker
+      
+      * list-style: square inside url("")     --------> /* shorthand: style-type,style-pos,style-img */
+
+
+
+
+
+
+
+
 
 
 
