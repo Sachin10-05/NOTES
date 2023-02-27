@@ -30,6 +30,23 @@ Contents:
 24. CSS List & Marker
 
 
+25. Advanced CSS: ✖✖
+      -- Gradient. (Color Transition)
+      -- Filter.
+      -- Shadows.
+      -- Positioning.
+      -- z-index.
+      -- 2D-Transform.
+      -- 3D-Transform.
+      -- Flexbox.
+      -- CSS grid.
+      -- CSS Responsiveness (Media Queries & Break-points)
+      -- CSS function & variables.
+      -- CSS Transition
+      -- CSS Animation
+
+
+
 
 
 
@@ -866,92 +883,6 @@ Contents:
       * marker-offset: auto;                  --------> It allows you to specify the distance between the marker and the text relating to that marker
       
       * list-style: square inside url("")     --------> /* shorthand: style-type,style-pos,style-img */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
