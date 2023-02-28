@@ -1,0 +1,79 @@
+                                                                Tailwind CSS
+                                                                ************
+
+
+
+Adding Tailwind to HTML:
+------------------------
+    * using CDN
+            
+        or
+            
+    * 2nd method:
+        step-1) Install Node
+        step-2) Open Terminal and Run commands:
+                * node -v 
+                * npm -v 
+                * npm install -D tailwindcss postcss autoprefixer vite
+                * npx tailwindcss init -p
+                
+        step-3) Install tailwind css intellisence extension in vs code.
+        step-4) Add "*" inside content in tailwind.config.js file.
+        step-5) Add "scripts": { "start": "vite"}, in package.json file.
+        step-6) create main.css and paste below commands there:
+                @tailwind base;
+                @tailwind components;
+                @tailwind utilities;
+                
+        step-7) link main.css to html file.
+        step-8) To start live server use command: 
+                * npm run start
+                * then ctrl + click on link
+
+
+
+
+
+
+
+
+
+Note:
+-----
+    -- Refer Tailwind css MDN.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
