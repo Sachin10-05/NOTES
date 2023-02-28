@@ -1,0 +1,299 @@
+                                                           CSS3 (Cascading Style Sheet)
+                                                           ****************************
+                                                           
+Advanced CSS
+************
+content:
+--------
+1. Gradient (Color Transition)
+2. Filter
+3. Shadows
+4. Positioning
+5. z-index
+6. 2D-Transform.
+7. 3D-Transform.
+8. Flexbox.
+9. CSS grid.
+10.CSS Responsiveness (Media Queries & Break-points)
+11.CSS function & variables.
+12.CSS Transition
+13.CSS Animation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Gradient:
+------------
+      * Color Transition.
+      * It lets us display smooth transitions between two or more specified colors.
+      * Types of gradients:-
+          -- Linear gradient
+          -- Radial gradient
+          -- Conic gradient
+          
+      * Linear Gradient:
+        ----------------
+            * It goes up/down/left/right/diagonal
+            * direction: default/specific-direction/with angle/using transparency)
+            * syntax:
+                  background-image:linear-gradient(direction, color-1, color-2,.......); ✔ 
+                  Ex- background-image: linear-gradient(to right, red, blue);
+                  
+      * Radial Gradient:
+        ----------------
+            * It is defined by its center.
+            * To define radial gradient we must define atleast two color stops.
+            * syntax:
+                  background-image: radial-gradient(shape size at pos, start-color, ......, last-color); ✔
+                  Ex-  background-image: radial-gradient(circle, red 5%, green);
+                  
+      * Conic Gradient:
+        ---------------
+            * It is a gradient with color transitions rotated around a center path.
+            * To define conic gradient we must define atleast two color.
+            * syntax:
+                  background-image:conic-gradient( [from angle] [at pos], color[degree],.......,color[degree]); ✔ 
+                  Ex- background-image: conic-gradient(red 45deg, yellow 55deg);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Filter:
+-----------
+      * The filter property defines visual effects (like blur and saturation) to an element (often <img>).
+      * filter: grayscale(100%)                                   -----> It will make the image completely gray (used for black and white images). ✔ 
+                drop-shadow(h-shadow v-shadow blur spread color)  -----> Applies a drop shadow effect to the image.                                ✔ 
+                blur(px)                                          -----> Applies a blur effect to the image. A larger value will create more blur.
+                brightness(%)                                     -----> Adjusts the brightness of the image.
+                contrast(%);                                      -----> Adjusts the contrast of the image. 0% will make the image completely black.
+                opacity(%)                                        -----> It descibes transparency-level, (0% == completely transparent) && (100% == no transparency).
+                saturate(%)                                       -----> Saturates the image.
+                hue-rotated()                                     -----> 
+                url()              
+                initial
+                inherit
+                none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Shadows:
+-----------
+      * Text shadow:-
+        ------------
+            * It is applicable to texts only.
+            * text-shadow: 2px 2px 4px red;                    ----->  (horizontal-shadow, vertical-shadow, blur-effect, color)
+            * text-shadow: 2px 2px 4px red, 2px 4px red green; ----->  Multiple shadows 
+            
+      * Box shadow:-
+        -----------
+            * It is applied to one or more element.
+            * box-shadow: 10px 10px 5px lightblue;             ----->  (horizontal-shadow, vertical-shadow, blur-effect, color)
+            * box-shadow: 10px 10px 5px 12px lightblue inset;  ----->  (horizontal-shadow, vertical-shadow, blur-effect, spread-radius, color)
+            
+      * Note: * A positive spread-radius value increases the size of the shadow, a negative value decreases the size of the shadow.
+              * The inset parameter changes the shadow from an outer shadow (outset) to an inner shadow.
+              * Practical Ex- Cards.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Positioning:
+---------------
+      * After using position property, elements are then positioned using the top, bottom, left, and right properties.
+      * However, these properties will not work unless the position property is set first. 
+      * Types:-
+           (i)  static    :- Static positioned elements are not affected by the top, bottom, left, and right properties. (by default)
+           (ii) fixed     :- It is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
+           
+           (iii)relative  :- It is positioned relative to its "normal (i.e, initial) position". ✔✔
+           
+           (iv) sticky : 
+                    * It toggles between relative and fixed, depending on the scroll position. 
+                    * In this case when element is in its normal pos then it will behave as 'RELATIVE' && if scrolled it will behave as 'FIXED'.
+                    
+           (v)  absolute : ✔✔
+                    * It is positioned relative to the nearest positioned ancestor (INSTEAD OF position:relative; IS ALREADY WRITTEN). ✔✔
+                    * However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+                    * Absolute positioned elements are removed from the normal flow, and can overlap elements.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5. z-index:
+-----------
+      * It specifies the stack order of an element.
+      * An element with greater stack order is always in front of an element with a lower stack order.
+      
+      * Note:-  
+                * z-index only works on positioned elements (i.e, absolute, relative, fixed, or sticky)
+                * z-index only works on flex items (elements that are direct children of display:flex elements).
+                * If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
