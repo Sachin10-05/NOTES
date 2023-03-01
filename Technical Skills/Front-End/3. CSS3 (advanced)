@@ -10,10 +10,10 @@ content:
 3. Shadows
 4. Positioning
 5. z-index
-6. 2D-Transform.
-7. 3D-Transform.
-8. Flexbox.
-9. CSS grid.
+6. 2D-Transform
+7. 3D-Transform
+8. CSS Flex
+9. CSS grid
 10.CSS Responsiveness (Media Queries & Break-points)
 11.CSS function & variables.
 12.CSS Transition
@@ -230,8 +230,142 @@ content:
 
 
 
-6. 
+6. 2D-Transform:
+-----------------
+      * CSS transforms allows us to move, rotate, scale, and skew elements.
+      * Transform methods are not applicable to inline-elements so we should make first element as block-level element.
+      * Also in case of inline-element we can add "position:absolute", then transform will work fine!
+      
+      * translate() -----> It moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).
+                           Ex- transform: translate(50px, 100px);
+        
+      * rotate()    -----> The rotate() method rotates an element clockwise or counter-clockwise according to a given degree.
+                           Ex- transform: rotate(20deg);
+        
+      * scaleX()    ----->
+      * scaleY()    ----->
+      * scale()     -----> * Zoomed-Effect. ✔
+                           * The scale() method increases or decreases the size of an element (according to the parameters given for the width and height). 
+                           Ex- transform: scale(2, 3); ----------> It increases two times of its original width, and three times of its original height.
+                           
+      * skewX()
+      * skewY()
+      * skew()      -----> The skew() method skews (i.e, tilt) an element along the X and Y-axis by the given angles.
+                           Ex- transform: skew(20deg, 10deg);
+                           
+      * matrix()    -----> * using matrix() method we can apply all above properties in one line.
+                           * matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+                           Ex- transform: matrix(1, -0.3, 0, 1, 0, 0); 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7. 3D-Transform:
+-----------------
+      * Here only z-axis is added, everything remains same.
+      * To work on z-axis we need to add on 'perspective()'.
+      
+      * transform: translateX();
+                   translateY();
+                   translateZ();
+                   
+      * transform: rotateX();
+                   rotateY();
+                   rotateZ();
+                   
+      Ex- transform: perspective(15px) translateZ(-25px);
+          transform: perspective(15px) scale(2) rotate(15deg);
+          transform: rotateZ(150deg);    /* In case of rotation we do not need 'perspection()' */ ✔ 
+          
+          perspective: 15px;
+          transform-style: preserve-3d; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8. CSS Flex:
+------------
+      * Flexbox is a CSS layout system that makes it easy to align and distribute items within a container using rows and columns.
+      * 1D layout systems.
+      * It contains two axis: i) main-axis  (Horizontal)
+                              ii)cross-axis (vertical direction)
+                              
+                              
+      * flex-container properties:
+            * display:          flex;                                                                   -----> To use flex properties we need to mention it 1st.
+            * flex-direction:   row, row-reverse, column, column-reverse;                               -----> It is used to change direction of main-axis. By default it is row.
+            * flex-wrap:        wrap, nowrap, wrap-reverse;                                             -----> It specifies whether the flexible items should wrap or not. Basically here flex-items width are intact.
+            * flex-flow:        row wrap;     			    		                                            -----> It is shorthand property for (flex-direction and flex-wrap). 
+            * justify-content:  center, flex-start, flex-end, space-around, space-between, space-evenly -----> It is responsible for alignment in horizontal axis.  ✔ 
+            * align-items:      center, flex-start, flex-end, stretch, baseline                         -----> It is responsible for alignment in vertical axis.    ✔ 
+            * gap:              row_gap col_gap       (shorthand notation)                              -----> to handle gaps b/w flex-items.
+            * align-content:    space-around/ space-between/ stretch/ center/ flex-start/ flex-end      -----> flex-items get aligned w.r.t cross-axis.
+            
+            
+      * flex-items properties:
+            * order       -----> It is used to change the order of flex-items. (order must be number, default is 0)
+            * flex-grow   -----> It specifies how much a flex item will grow relative to the rest of the flex items. (order must be number, default is 0)
+            * flex-shrink -----> It specifies how much a flex item will shrink relative to the rest of the flex items when we squeeze it. (The value must be a number, default value is 1).
+            * flex-basis  -----> It specifies initial width of flex-items.also content inside flex item will not get trimmed instead flex-item width will change accordingly.
+            * align-self  -----> It specifies the alignment for the selected item inside the flexible container.
+            
+            
+      * Note: To pefectly center a flex-item:-
+              justify-content: center;  /* Horizontally */
+              align-items:center;       /* Vertically */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9. 
 
 
 
