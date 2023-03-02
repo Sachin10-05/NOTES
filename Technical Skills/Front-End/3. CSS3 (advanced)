@@ -53,7 +53,7 @@ content:
             * It goes up/down/left/right/diagonal
             * direction: default/specific-direction/with angle/using transparency)
             * syntax:
-                  background-image:linear-gradient(direction, color-1, color-2,.......); ✔ 
+                  background-image:linear-gradient(direction, color-1, color-2,.......);  
                   Ex- background-image: linear-gradient(to right, red, blue);
                   
       * Radial Gradient:
@@ -61,7 +61,7 @@ content:
             * It is defined by its center.
             * To define radial gradient we must define atleast two color stops.
             * syntax:
-                  background-image: radial-gradient(shape size at pos, start-color, ......, last-color); ✔
+                  background-image: radial-gradient(shape size at pos, start-color, ......, last-color); 
                   Ex-  background-image: radial-gradient(circle, red 5%, green);
                   
       * Conic Gradient:
@@ -69,7 +69,7 @@ content:
             * It is a gradient with color transitions rotated around a center path.
             * To define conic gradient we must define atleast two color.
             * syntax:
-                  background-image:conic-gradient( [from angle] [at pos], color[degree],.......,color[degree]); ✔ 
+                  background-image:conic-gradient( [from angle] [at pos], color[degree],.......,color[degree]);  
                   Ex- background-image: conic-gradient(red 45deg, yellow 55deg);
 
 
@@ -327,7 +327,7 @@ content:
             * display:          flex;                                                                   -----> To use flex properties we need to mention it 1st.
             * flex-direction:   row, row-reverse, column, column-reverse;                               -----> It is used to change direction of main-axis. By default it is row.
             * flex-wrap:        wrap, nowrap, wrap-reverse;                                             -----> It specifies whether the flexible items should wrap or not. Basically here flex-items width are intact.
-            * flex-flow:        row wrap;     			    		                                            -----> It is shorthand property for (flex-direction and flex-wrap). 
+            * flex-flow:        row wrap;                                                               -----> It is shorthand property for (flex-direction and flex-wrap). 
             * justify-content:  center, flex-start, flex-end, space-around, space-between, space-evenly -----> It is responsible for alignment in horizontal axis.  ✔ 
             * align-items:      center, flex-start, flex-end, stretch, baseline                         -----> It is responsible for alignment in vertical axis.    ✔ 
             * gap:              row_gap col_gap       (shorthand notation)                              -----> to handle gaps b/w flex-items.
@@ -365,7 +365,9 @@ content:
 
 
 
-9. 
+9. CSS grid:
+------------
+      * 
 
 
 
