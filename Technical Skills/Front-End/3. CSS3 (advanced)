@@ -367,7 +367,313 @@ content:
 
 9. CSS grid:
 ------------
-      * 
+      * The CSS Grid Layout Module offers a 2D grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.
+      * A grid layout consists of a parent element, with one or more child elements.
+      * To use grid we need to include display:grid;
+      * By defalut grid contains one column in top to bottom fashion.
+      
+      * grid-container properties:
+        ---------------------------
+              * display:  * grid;        -----> It creates block-level grid container.
+                          * inline-grid; -----> It creates inline grid container.
+                          
+                          
+              * row-gap: 20px;    -----> It sets gap between rows.
+              * column-gap: 10px; -----> It sets gap between columns.
+              * gap: 20px 10px;   -----> /* Shorthand */
+              
+              
+              * grid-template-columns:  10px 10px 10px;  -----> No. of columns + width of each cols.
+                                        auto auto auto;
+                                        1fr 1fr 1fr;
+                                        repeat(3, 1fr);
+                                        
+                                        
+              * grid-template-rows: 5px auto 10px;                              -----> Here each value defines the height of the respective rows.
+              * grid-template:  <grid-template-rows> | <grid-template-columns>; -----> /* Shorthand */
+              
+              
+              * grid-auto-columns:  minmax(10px,auto) | auto | max-content | min-content | 10px; -----> It sets a default width of all columns. 
+              * grid-auto-rows:     minmax(10px,auto) | auto | max-content | min-content | 25px; -----> It sets a default height of all rows.
+              * grid-auto-flow:     row | column | row dense | column dense                                            					 
+              
+              
+              * justify-content:  start | end | center | stretch | space-around | space-between | space-evenly; -----> It aligns grid-item in horizontal direction. ✔ 
+              * align-content:    start | end | center | stretch | space-around | space-between | space-evenly; -----> It aligns grid-item in vertical direction.   ✔                
+              * align-items:      start | end | center | stretch;                                               -----> It takes content width/height                ✔ 
+              * place-items:      /* Shorthand (justify-content and align-content) */
+              
+              
+              * grid-column-gap: 10px;      -----> It specifies the size of the gap between columns. ❌
+              * grid-row-gap:    20px;      -----> It specifies the size of the gap between rows.    ❌ 
+              * grid-gap:        20px 10px; ----->                                                   ❌ 
+              
+              
+      * grid items/child properties:
+        ----------------------------
+              * All child properties behaves same like parent properties but diff is parent-properties is applied to all grid-items, 
+                but using child-properties individual grid-items can be aligned.
+                
+              * jutify-self:	start | end | center | stretch	   -----> contents shift in Horizontal direction. ✔ 
+              * align-self: 	start | end | center | stretch     -----> contents shift in Vertical direction.   ✔ 
+              * place-self: /* Shorthand (justify-self and align-self) */
+              
+              * grid-column-start: 1;
+              * grid-column-end:   3;	
+              * grid-row-start: 1;	
+              * grid-row-end:   3;
+              * grid-column:  1 / 3       -----> /* Shorthand for (grid-column-start / grid-column-end) */
+                              1 / span 2 
+              * grid-row:     1 / 3       -----> /* Shorthand for (grid-row-start / grid-row-end ) */
+                              1 / span 2 
+              * grid-area:    1/3 / 1/3   -----> /* Shorthand for (grid-row / grid-column)*/
+
+
+      * grid template areas:
+        --------------------
+              * container property.
+              * The grid-template-areas property specifies areas within the grid layout.
+              * You can name grid items by using the grid-area property, and then reference to the name in the grid-template-areas property.
+              Ex- <div class="container">
+                      <div class="box" id="header">Header</div>
+                      <div class="box" id="sidebar">Sidebar</div>
+                      <div class="box" id="content">Content</div>
+                      <div class="box" id="footer">Footer</div>
+                  </div>
+                  
+                  .container
+                  {
+                    height:700px;
+                    border:1px solid red;
+                    background-color:yellow;
+                    display:grid;
+                    grid-template-columns:200px 400px;
+                    grid-template-rows:30px 500px 30px;
+                    grid-template-areas:
+                        "hd hd"
+                        "side main"
+                        "ft ft";
+                  }
+                  
+                  .box {
+                    border:1px solid green;
+                    background-color:aqua;
+                  }
+                  
+                  #header {
+                    grid-area:hd;
+                  }
+                  
+                  #sidebar {
+                    grid-area:side;
+                  }
+                  
+                  #content {
+                    grid-area:main;
+                  }
+                  
+                  #footer {
+                    grid-area:ft;
+                  } 
+
+
+      * Nested Grid:
+        ------------
+              * It can be simply done using the display:grid; for both parent and child. ✔ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10. CSS Responsiveness (Media Queries & Break-points):
+------------------------------------------------------
+      * Viewport:   * The area of the window in which web content can be seen.
+                    * we use the dimension of the viewport (usually the width, but sometimes the height) as the basis of our media queries.
+                    
+      * Media Queries are used to set different style for different screen sized devices.
+      * we use breakpoints to set the condition of a media query.
+      * Essentially, media query breakpoints are px value that a developer/designer can define in CSS. When a resposible website reaches those px value a transformation occurs so that a website offers an optimal user interface.
+      * syntax: @media(feature: value) { }
+                Ex- @media(min-width:600px) and (max-width:900px) { } 
+                
+      * Extra Large devices:  @media only screen and (min-width: 1200px) {...}      -----> Large Laptops/Desktops
+      * Large devices:        @media only screen and (min-width: 992px)  {...}      -----> Laptops/Desktops
+      * Medium devices:       @media only screen and (min-width: 768px)  {...}      -----> Landscape Tablets	  
+      * Small devices:        @media only screen and (min-width: 600px)  {...}      -----> Portrait Tablets and Large Phones
+      * Extra small devices:  @media only screen and (max-width: 600px)  {...}      -----> Phones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11. CSS function & variables:
+-----------------------------
+      * Function:-  calc(), minmax(), url(), etc.
+        Variable:-  syntax: --var_name: value;
+                    Ex-  :root() {
+                            --color-1: #981a2c;
+                         }
+                         
+                         .container {
+                            backgrond-color: var(--color-1);
+                         }
+                         
+      * Note: variable declared inside :root() are global variables and can be applied to entire document.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12. CSS Transition:
+-------------------
+      * CSS transitions allows you to change property values smoothly, over a given duration.
+      * Animation can be done either using transition or animation & keyframe.
+      * To create a transition effect, you must specify two things:
+        i) the CSS property you want to add an effect to.
+        ii)the duration of the effect.
+        
+      * transition                       -----------> shorthand (t_property   t_duration   t_timing_func   t_delay)
+      * transition-delay: 4ms;           -----------> It specifies a delay (in seconds) for the transition effect. 
+      * transition-duration: 10s;        -----------> It specifies how many seconds or milliseconds a transition effect takes to complete.(mandatory)
+      * transition-property: width;      -----------> kis property p hme lgani h transition.
+      * transition-timing-function:-
+              * ease        -----> Transition effect with a slow start, then fast, then end slowly (this is default)  
+              * linear      -----> Transition effect with the same speed from start to end  ✔ 
+              * ease-in     -----> Transition effect with a slow start                      ✔ 
+              * ease-out    -----> Transition effect with a slow end                        ✔ 
+              * ease-in-out -----> Transition effect with a slow start and end              ✔ 
+              * cubic-bezier(n,n,n,n)
+              
+      * Ex- .box {
+                transition: width 1s ease 2s;
+                transition: transform 5s ease 1s;
+            }
+            
+            .box:hover {
+                width: 350px;
+                transform: rotate(45deg);
+                background-color: green;
+            }
+            
+      * Ex- transition: all 0.5s; ✔✔
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13.CSS Animation:
+------------------
+      * An animation lets an element gradually change from one style to another.
+      * To use CSS animation, you must first specify some keyframes for the animation. (@keyframes)
+      * Keyframes hold what styles the element will have from starting to end at certain times.
+      
+      * animation-name: sachin;
+      * animation-delay: 4ms;
+      * animation-duration: 10s;
+      * animation-timing-function: ease;
+      * animation-iteration-count: 5;     -----> It specifies the number of times an animation should be played.
+      * animation-fill-mode: both;
+      * animation-play-state: running;
+      * animation-direction: normal;
+      
+      * Ex-
+        .container
+        {
+          width:100%;
+          height:215px;
+          background-color:green;
+          border:3px solid red;
+	      }
+        
+        .box
+        {
+          height:212px;
+          width:212px;
+          border:2px solid orange;
+          background-color:aqua;
+          animation-name:sachin;
+          animation-duration:3s;
+          animation-iteration-count:4;
+          animation-timing-function:ease-in;
+          animation-delay:1s;
+          animation-direction: alternate;
+        }
+        
+        @keyframes sachin {	
+            from {
+              width:212px;
+            }
+            to { 	
+              width: 800px;
+            }
+        }
+        
+        
+      * Note: Diff. b/w Transition and Animation:-
+              *  The animation property allows you to change the properties of an element over a specific duration, while transition defines how an element changes over a specific duration.
+              *  CSS transitions are generally best for simple from-to movements, while CSS animations are for more complex series of movements.
+	
 
 
 
